@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages">
+            {% for message in messages %}
+            <div class="message {% if message.sender == 'You' %}sent{% else %}received{% endif %}">
+                <div class="message-sender">{{ message.sender }}</div>
+                <div class="message-content">{{ message.content }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <form method="post" action="/">
+            <input type="text" name="input_text" id="input-text" placeholder="Type a message">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <script>
+        // Scroll to the latest message
+        var chatMessages = document.getElementById('chat-messages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    </script>
+</body>
+</html>

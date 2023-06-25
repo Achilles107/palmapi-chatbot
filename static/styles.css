@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+#chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message-sender {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.message-content {
+    background-color: #e6e6e6;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-bottom-color: #0777f5;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0777f5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0551b2;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
