@@ -4,7 +4,7 @@ import google.generativeai as palm
 app = Flask(__name__)
 messages = []
 
-PALM_KEY = 'AIzaSyBg_mbXxMU-lnYjJ9ow29QZc4cEx2dju7s'
+PALM_KEY = 'YOUR_KEY'
 palm.configure(api_key=PALM_KEY)
 
 @app.route('/', methods=['GET', 'POST'])
